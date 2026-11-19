@@ -1,32 +1,27 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import DMHeroSection from '../components/landing/DMHeroSection';
 import DMServicesGrid from '../components/landing/DMServicesGrid';
 import DMEmpathySection from '../components/landing/DMEmpathySection';
 import DMDeliveryOptions from '../components/landing/DMDeliveryOptions';
 import DMValuesSection from '../components/landing/DMValuesSection';
-import DMServiceForm from '../components/landing/DMServiceForm';
 import DMFAQSection from '../components/landing/DMFAQSection';
 import DMFinalCTA from '../components/landing/DMFinalCTA';
 import DMFloatingCTA from '../components/landing/DMFloatingCTA';
 
 export default function Home() {
-  const scrollToForm = () => {
-    const formElement = document.getElementById('service-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
+  const navigate = useNavigate();
+  const goToForm = () => navigate('/GetSupport');
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-purple-50/20 to-blue-50/30">
-      <DMHeroSection onCTAClick={scrollToForm} />
+      <DMHeroSection onCTAClick={goToForm} />
       <DMServicesGrid />
       <DMEmpathySection />
       <DMDeliveryOptions />
       <DMValuesSection />
-      <DMServiceForm />
       <DMFAQSection />
-      <DMFinalCTA onFormClick={scrollToForm} />
+      <DMFinalCTA onFormClick={goToForm} />
       <DMFloatingCTA />
       
       {/* Footer */}

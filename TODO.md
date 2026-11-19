@@ -5,4 +5,5 @@
 - [x] Preserve the Blog route with search, category filters, published post previews, and navigation to individual posts.
 - [x] Preserve the BlogPost route with cover image, metadata, markdown content, and back navigation.
 - [x] Preserve the AdminBlog route with create, edit, publish/unpublish, and delete behavior.
+- [x] Add the standalone Get Support page with the inquiry form, Back to Home control, updated CTA routing, organization strip, revised hero messaging, and updated age ranges from the latest Base44 version.
 - [x] Run the imported application successfully in Manus Preview and keep the route manifest synchronized.

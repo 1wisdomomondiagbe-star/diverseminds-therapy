@@ -178,11 +178,11 @@ export default function DMServiceForm() {
                   className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
 
                   <option value="">Select age range</option>
-                  <option value="under_3">Under 3 years</option>
-                  <option value="3_5">3-5 years</option>
+                  <option value="under_3">2-3 years</option>
+                  <option value="3_5">4-5 years</option>
                   <option value="6_9">6-9 years</option>
                   <option value="10_12">10-12 years</option>
-                  <option value="13_plus">13+ years</option>
+                  <option value="13_plus">13-18 years</option>
                 </select>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { createPageUrl } from './utils';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Mail, MessageCircle } from 'lucide-react';
@@ -11,9 +11,19 @@ import {
 
 export default function Layout({ children, currentPageName }) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const navigate = useNavigate();
 
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Organisation name strip */}
+      <div className="bg-gradient-to-r from-purple-700 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex justify-end">
+          <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-right leading-snug">
+            DiverseMinds Special Education Needs &amp; Consult Ltd.
+          </span>
+        </div>
+      </div>
+
       {/* Navigation Bar */}
       <nav className="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -75,7 +85,7 @@ export default function Layout({ children, currentPageName }) {
                 </PopoverContent>
               </Popover>
               <Button 
-                onClick={() => document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => navigate('/GetSupport')}
                 className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
               >
                 Get Started
@@ -142,7 +152,7 @@ export default function Layout({ children, currentPageName }) {
                 <Button 
                   onClick={() => {
                     setMobileMenuOpen(false);
-                    document.getElementById('service-form')?.scrollIntoView({ behavior: 'smooth' });
+                    navigate('/GetSupport');
                   }}
                   className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 w-full"
                 >

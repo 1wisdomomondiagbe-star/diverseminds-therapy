@@ -39,8 +39,8 @@ export default function DMHeroSection({ onCTAClick }) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight px-2">
 
-            Empowering Children with Special Needs —{' '}
-            <span className="text-purple-600">Worldwide</span>
+            Building Skills,{' '}
+            <span className="text-purple-600">Creating Independence.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -67,7 +67,7 @@ export default function DMHeroSection({ onCTAClick }) {
               className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto relative overflow-hidden group">
 
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
-              <span className="text-center relative z-10">Find the Right Support for Your Child</span>
+              <span className="text-center relative z-10">Click here for free consultation</span>
             </Button>
           </motion.div>
 
@@ -78,9 +78,10 @@ export default function DMHeroSection({ onCTAClick }) {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-500 px-4">
 
-            <span className="flex items-center gap-1">Free Consultation
-
-
+            <span className="flex items-center gap-1">Free Consultation</span>
+            <span className="flex items-center gap-1">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full" />
+              Ages 2-18 Years
             </span>
             <span className="flex items-center gap-1">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full" />

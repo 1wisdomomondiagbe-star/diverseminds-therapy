@@ -88,6 +88,14 @@ const ServiceInquiry = {
   },
 };
 
+const TherapyInquiry = ServiceInquiry;
+const appLogs = { async logUserInApp() { return null; } };
+const integrations = { Core: { async SendEmail() { return { ok: true }; } } };
 const auth = { async me() { return null; }, logout() {}, redirectToLogin() {} };
 
-export const base44 = { entities: { BlogPost, ServiceInquiry }, auth };
+export const base44 = {
+  entities: { BlogPost, ServiceInquiry, TherapyInquiry },
+  appLogs,
+  integrations,
+  auth,
+};

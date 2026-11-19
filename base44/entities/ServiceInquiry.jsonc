@@ -1,0 +1,116 @@
+{
+  "name": "ServiceInquiry",
+  "type": "object",
+  "properties": {
+    "client_name": {
+      "type": "string",
+      "description": "Child/Client's first name (optional)"
+    },
+    "client_age": {
+      "type": "string",
+      "enum": [
+        "under_3",
+        "3_5",
+        "6_9",
+        "10_12",
+        "13_plus"
+      ],
+      "description": "Client's age range"
+    },
+    "diagnosis_status": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "in_progress",
+        "prefer_not_to_say"
+      ],
+      "description": "Professional evaluation or diagnosis status"
+    },
+    "observation_timeframe": {
+      "type": "string",
+      "enum": [
+        "recently",
+        "over_time",
+        "early_childhood",
+        "not_sure"
+      ],
+      "description": "How long concerns have been noticed"
+    },
+    "parent_emotion": {
+      "type": "string",
+      "enum": [
+        "just_exploring",
+        "slightly_concerned",
+        "looking_for_guidance",
+        "feeling_overwhelmed"
+      ],
+      "description": "Parent's current emotional state (optional)"
+    },
+    "current_challenges": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Current challenges and concerns"
+    },
+    "services_of_interest": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Services interested in"
+    },
+    "delivery_preference": {
+      "type": "string",
+      "enum": [
+        "online",
+        "home_based",
+        "school_based",
+        "both",
+        "not_sure"
+      ],
+      "description": "Service delivery preference"
+    },
+    "main_goal": {
+      "type": "string",
+      "description": "Parent/caregiver's main goal or concern"
+    },
+    "parent_name": {
+      "type": "string",
+      "description": "Parent or caregiver name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number or WhatsApp"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "location": {
+      "type": "string",
+      "description": "City/Country (for service planning)"
+    },
+    "consent_to_contact": {
+      "type": "boolean",
+      "description": "Consent to be contacted"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed"
+      ],
+      "default": "new",
+      "description": "Inquiry status"
+    }
+  },
+  "required": [
+    "parent_name",
+    "email",
+    "consent_to_contact"
+  ]
+}

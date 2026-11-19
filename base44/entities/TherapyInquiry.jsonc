@@ -1,0 +1,104 @@
+{
+  "name": "TherapyInquiry",
+  "type": "object",
+  "properties": {
+    "child_name": {
+      "type": "string",
+      "description": "Child's first name (optional)"
+    },
+    "child_age": {
+      "type": "string",
+      "enum": [
+        "under_3",
+        "3_5",
+        "6_9",
+        "10_plus"
+      ],
+      "description": "Child's age range"
+    },
+    "diagnosis_status": {
+      "type": "string",
+      "enum": [
+        "yes",
+        "no",
+        "not_sure",
+        "being_evaluated"
+      ],
+      "description": "Diagnosis status"
+    },
+    "communication_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Communication and social skills concerns"
+    },
+    "behavior_concerns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Behavior and daily life concerns"
+    },
+    "daily_living_skills": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Daily living skills concerns"
+    },
+    "learning_attention": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Learning and attention concerns"
+    },
+    "therapy_preference": {
+      "type": "string",
+      "enum": [
+        "at_home",
+        "in_clinic",
+        "combination",
+        "not_sure"
+      ],
+      "description": "Therapy setting preference"
+    },
+    "main_concern": {
+      "type": "string",
+      "description": "Parent's biggest concern or goal"
+    },
+    "parent_name": {
+      "type": "string",
+      "description": "Parent or caregiver name"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Phone number or WhatsApp"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "consent_to_contact": {
+      "type": "boolean",
+      "description": "Consent to be contacted"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed"
+      ],
+      "default": "new",
+      "description": "Inquiry status"
+    }
+  },
+  "required": [
+    "parent_name",
+    "email",
+    "consent_to_contact"
+  ]
+}

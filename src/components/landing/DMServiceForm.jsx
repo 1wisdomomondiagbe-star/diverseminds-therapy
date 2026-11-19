@@ -103,15 +103,15 @@ export default function DMServiceForm() {
 
   if (isSuccess) {
     return (
-      <section id="service-form" className="bg-gradient-to-b from-purple-50/30 via-white to-blue-50/20 py-12 sm:py-16 md:py-20 lg:py-28">
+      <section id="service-form" className="bg-gradient-to-b from-[#f6f2fb]/45 via-white to-[#f1f7fd]/45 py-12 sm:py-16 md:py-20 lg:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-purple-50/80 via-white to-blue-50/60 rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-purple-100/50">
+            className="bg-gradient-to-br from-purple-50/80 via-white to-blue-50/60 rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-[#e5daf3]/50">
 
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-purple-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#845cc5] to-[#0a77e2] rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
               <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Thank You!</h3>
@@ -128,7 +128,7 @@ export default function DMServiceForm() {
   }
 
   return (
-    <section id="service-form" className="bg-gradient-to-b from-purple-50/30 via-white to-blue-50/20 py-12 sm:py-16 md:py-20 lg:py-28">
+    <section id="service-form" className="bg-gradient-to-b from-[#f6f2fb]/45 via-white to-[#f1f7fd]/45 py-12 sm:py-16 md:py-20 lg:py-28">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -151,7 +151,7 @@ export default function DMServiceForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-gradient-to-br from-white via-purple-50/30 to-blue-50/20 rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-purple-100/50">
+          className="bg-gradient-to-br from-white via-purple-50/30 to-blue-50/20 rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-[#e5daf3]/50">
 
           {/* Child Information */}
           <div className="space-y-4 sm:space-y-6">
@@ -225,7 +225,7 @@ export default function DMServiceForm() {
             <Label>What challenges are you experiencing? (Select all that apply)</Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {challenges.map((challenge) =>
-              <div key={challenge} className="flex items-center space-x-2 p-2 rounded-lg hover:bg-purple-50/50 transition-colors">
+              <div key={challenge} className="flex items-center space-x-2 p-2 rounded-lg hover:bg-[#f6f2fb]/50 transition-colors">
                   <Checkbox
                   id={challenge}
                   checked={formData.current_challenges.includes(challenge)}
@@ -244,7 +244,7 @@ export default function DMServiceForm() {
             <Label>Which services are you interested in? (Select all that apply)</Label>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {services.map((service) =>
-              <div key={service} className="flex items-center space-x-2 p-2 rounded-lg hover:bg-purple-50/50 transition-colors">
+              <div key={service} className="flex items-center space-x-2 p-2 rounded-lg hover:bg-[#f6f2fb]/50 transition-colors">
                   <Checkbox
                   id={service}
                   checked={formData.services_of_interest.includes(service)}
@@ -381,7 +381,7 @@ export default function DMServiceForm() {
               type="submit"
               disabled={isSubmitting}
               size="lg"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 sm:px-12 py-5 sm:py-6 text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto relative overflow-hidden group">
+              className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] hover:from-[#7049b5] hover:to-[#075fb8] text-white px-8 sm:px-12 py-5 sm:py-6 text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto relative overflow-hidden group">
 
               {isSubmitting ?
               <>

@@ -11,8 +11,8 @@ export default function DMEmpathySection() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-blue-50/50 via-purple-50/40 to-orange-50/50 py-12 sm:py-16 md:py-20 lg:py-28 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/20 via-transparent to-blue-50/20" />
+    <section className="bg-gradient-to-br from-[#f1f7fd]/70 via-white to-[#f6f2fb]/65 py-12 sm:py-16 md:py-20 lg:py-28 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#f6f2fb]/45 via-transparent to-[#f1f7fd]/45" />
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export default function DMEmpathySection() {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="flex items-start gap-2 sm:gap-3 text-gray-700"
               >
-                <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+                <span className="w-2 h-2 bg-[#845cc5] rounded-full mt-2 flex-shrink-0" />
                 <span className="text-sm sm:text-base md:text-lg">{concern}</span>
               </motion.li>
             ))}

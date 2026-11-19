@@ -18,60 +18,60 @@ export default function DMServicesGrid() {
       icon: Brain,
       title: 'ABA Therapy',
       description: 'Evidence-based behavioral intervention for skill development',
-      color: 'from-purple-100 to-purple-200'
+      color: 'from-[#ede6f8] to-[#d9c9ef]'
     },
     {
       icon: MessageSquare,
       title: 'Speech Therapy',
       description: 'Communication and language development support',
-      color: 'from-blue-100 to-blue-200'
+      color: 'from-[#dcecfb] to-[#bdd9f5]'
     },
     {
       icon: Hand,
       title: 'Occupational Therapy',
       description: 'Fine motor skills and daily living activities',
-      color: 'from-green-100 to-green-200'
+      color: 'from-[#d9f0e7] to-[#b9e0cf]'
     },
     {
       icon: BookOpen,
       title: 'Homeschooling Support',
       description: 'Personalized educational programs at home',
-      color: 'from-orange-100 to-orange-200'
+      color: 'from-[#f1f7fd] to-[#dcecfb]'
     },
     {
       icon: UserCheck,
       title: 'Shadow Teacher',
       description: 'One-on-one school support services',
-      color: 'from-yellow-100 to-yellow-200'
+      color: 'from-[#eef8f4] to-[#d9f0e7]'
     },
     {
       icon: Users,
       title: 'Parent Training',
       description: 'Coaching and guidance for caregivers',
-      color: 'from-pink-100 to-pink-200'
+      color: 'from-[#ede6f8] to-[#d9c9ef]'
     },
     {
       icon: GraduationCap,
       title: 'Staff Training',
       description: 'Professional capacity building programs',
-      color: 'from-indigo-100 to-indigo-200'
+      color: 'from-[#dcecfb] to-[#bdd9f5]'
     },
     {
       icon: Languages,
       title: 'Sign Language',
       description: 'Sign language tutoring and communication',
-      color: 'from-teal-100 to-teal-200'
+      color: 'from-[#d9f0e7] to-[#b9e0cf]'
     },
     {
       icon: ClipboardCheck,
       title: 'Assessments',
       description: 'Online and physical developmental evaluations',
-      color: 'from-rose-100 to-rose-200'
+      color: 'from-[#f1f7fd] to-[#dcecfb]'
     }
   ];
 
   return (
-    <section id="services" className="bg-gradient-to-r from-purple-50/30 via-white to-blue-50/30 border-y border-purple-100/50 shadow-sm py-8 sm:py-12">
+    <section id="services" className="bg-gradient-to-r from-[#f6f2fb]/45 via-white to-[#f1f7fd]/50 border-y border-[#e5daf3]/50 shadow-sm py-8 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -92,7 +92,7 @@ export default function AdminBlog() {
               <select
                 value={form.category}
                 onChange={(e) => setForm({ ...form, category: e.target.value })}
-                className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500"
+                className="w-full mt-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#845cc5]"
               >
                 {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
@@ -116,13 +116,13 @@ export default function AdminBlog() {
               id="published"
               checked={form.published}
               onChange={(e) => setForm({ ...form, published: e.target.checked })}
-              className="w-4 h-4 accent-purple-600"
+              className="w-4 h-4 accent-[#845cc5]"
             />
             <Label htmlFor="published">Publish (visible on blog)</Label>
           </div>
 
           <div className="flex gap-3 pt-2">
-            <Button onClick={handleSave} disabled={saving || !form.title || !form.content} className="bg-gradient-to-r from-purple-600 to-blue-600">
+            <Button onClick={handleSave} disabled={saving || !form.title || !form.content} className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2]">
               {saving ? 'Saving...' : 'Save Post'}
             </Button>
             <Button variant="outline" onClick={() => setEditing(null)}>Cancel</Button>
@@ -139,7 +139,7 @@ export default function AdminBlog() {
           <h1 className="text-2xl font-bold text-gray-900">Blog Manager</h1>
           <p className="text-gray-500 text-sm mt-1">Create and manage blog posts</p>
         </div>
-        <Button onClick={openNew} className="bg-gradient-to-r from-purple-600 to-blue-600">
+        <Button onClick={openNew} className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2]">
           <Plus className="w-4 h-4 mr-2" /> New Post
         </Button>
       </div>
@@ -164,7 +164,7 @@ export default function AdminBlog() {
                   <Badge className={post.published ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-500'}>
                     {post.published ? 'Published' : 'Draft'}
                   </Badge>
-                  <Badge className="bg-purple-100 text-purple-700">{post.category}</Badge>
+                  <Badge className="bg-[#ede6f8] text-[#7049b5]">{post.category}</Badge>
                 </div>
                 {post.excerpt && <p className="text-sm text-gray-400 truncate mt-0.5">{post.excerpt}</p>}
               </div>
@@ -172,8 +172,8 @@ export default function AdminBlog() {
                 <button onClick={() => togglePublish(post)} className="p-2 hover:bg-gray-100 rounded-lg" title={post.published ? 'Unpublish' : 'Publish'}>
                   {post.published ? <EyeOff className="w-4 h-4 text-gray-500" /> : <Eye className="w-4 h-4 text-gray-500" />}
                 </button>
-                <button onClick={() => openEdit(post)} className="p-2 hover:bg-purple-50 rounded-lg">
-                  <Pencil className="w-4 h-4 text-purple-600" />
+                <button onClick={() => openEdit(post)} className="p-2 hover:bg-[#f6f2fb] rounded-lg">
+                  <Pencil className="w-4 h-4 text-[#845cc5]" />
                 </button>
                 <button onClick={() => handleDelete(post.id)} className="p-2 hover:bg-red-50 rounded-lg">
                   <Trash2 className="w-4 h-4 text-red-500" />

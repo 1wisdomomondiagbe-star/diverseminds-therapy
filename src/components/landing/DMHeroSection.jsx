@@ -5,13 +5,13 @@ import { Button } from '@/components/ui/button';
 
 export default function DMHeroSection({ onCTAClick }) {
   return (
-    <section className="relative bg-gradient-to-br from-purple-50/80 via-blue-50/60 to-orange-50/70 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-[#f6f2fb]/90 via-[#f1f7fd]/80 to-white overflow-hidden">
       {/* Decorative background elements with enhanced depth */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-purple-200 to-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
-        <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-br from-blue-200 to-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000" />
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-br from-orange-200 to-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-4000" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-green-100 to-emerald-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-6000" />
+        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-[#845cc5]/25 to-[#d9c9ef]/25 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob" />
+        <div className="absolute top-40 right-10 w-96 h-96 bg-gradient-to-br from-[#0a77e2]/20 to-[#dcecfb]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-gradient-to-br from-[#37ae84]/18 to-[#d9f0e7]/18 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-4000" />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-[#37ae84]/15 to-[#eef8f4]/15 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-6000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-32">
@@ -40,7 +40,7 @@ export default function DMHeroSection({ onCTAClick }) {
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 sm:mb-6 leading-tight px-2">
 
             Building Skills,{' '}
-            <span className="text-purple-600">Creating Independence.</span>
+            <span className="text-[#845cc5]">Creating Independence.</span>
           </motion.h1>
 
           {/* Subheadline */}
@@ -64,7 +64,7 @@ export default function DMHeroSection({ onCTAClick }) {
             <Button
               onClick={onCTAClick}
               size="lg"
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto relative overflow-hidden group">
+              className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] hover:from-[#7049b5] hover:to-[#075fb8] text-white px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg rounded-full shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 w-full sm:w-auto relative overflow-hidden group">
 
               <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
               <span className="text-center relative z-10">Click here for free consultation</span>
@@ -80,15 +80,15 @@ export default function DMHeroSection({ onCTAClick }) {
 
             <span className="flex items-center gap-1">Free Consultation</span>
             <span className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full" />
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#845cc5] rounded-full" />
               Ages 2-18 Years
             </span>
             <span className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full" />
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#845cc5] rounded-full" />
               Global Services
             </span>
             <span className="flex items-center gap-1">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-500 rounded-full" />
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-[#845cc5] rounded-full" />
               Expert Team
             </span>
           </motion.div>
@@ -110,7 +110,7 @@ export default function DMHeroSection({ onCTAClick }) {
               key={index}
               className="flex flex-col items-center gap-2 p-3 sm:p-4 bg-white/70 backdrop-blur-md rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/50">
 
-                <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600" />
+                <item.icon className="w-6 h-6 sm:w-8 sm:h-8 text-[#845cc5]" />
                 <span className="text-xs font-medium text-gray-700 text-center">{item.label}</span>
               </div>
             )}

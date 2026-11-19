@@ -28,14 +28,14 @@ export default function Blog() {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50/40 via-white to-blue-50/20">
+    <div className="min-h-screen bg-gradient-to-b from-[#f6f2fb]/55 via-white to-[#f1f7fd]/55">
       {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 to-blue-600 py-16 px-4 text-center">
+      <div className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] py-16 px-4 text-center">
         <div className="max-w-6xl mx-auto flex justify-start mb-6">
           <BackToHome />
         </div>
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">DiverseMinds Blog</h1>
-        <p className="text-purple-100 text-lg max-w-xl mx-auto">
+        <p className="text-[#f0e9fa] text-lg max-w-xl mx-auto">
           Resources, insights, and guidance for families supporting children with special needs.
         </p>
       </div>
@@ -60,8 +60,8 @@ export default function Blog() {
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-1.5 rounded-full text-sm font-medium transition-all ${
                 activeCategory === cat
-                  ? 'bg-purple-600 text-white shadow-md'
-                  : 'bg-white text-gray-600 border border-gray-200 hover:border-purple-300 hover:text-purple-600'
+                  ? 'bg-[#845cc5] text-white shadow-md'
+                  : 'bg-white text-gray-600 border border-gray-200 hover:border-purple-300 hover:text-[#845cc5]'
               }`}
             >
               {cat}

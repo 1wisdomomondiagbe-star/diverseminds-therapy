@@ -39,7 +39,7 @@ export default function BlogPostPage() {
       <div className="text-center py-32">
         <p className="text-5xl mb-4">🔍</p>
         <p className="text-gray-500 text-lg">Post not found.</p>
-        <Link to={createPageUrl('Blog')} className="text-purple-600 hover:underline mt-4 inline-block">← Back to Blog</Link>
+        <Link to={createPageUrl('Blog')} className="text-[#845cc5] hover:underline mt-4 inline-block">← Back to Blog</Link>
       </div>
     );
   }
@@ -53,11 +53,11 @@ export default function BlogPostPage() {
       )}
 
       <div className="max-w-3xl mx-auto px-4 py-10">
-        <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-1 text-purple-600 hover:underline mb-6 text-sm">
+        <Link to={createPageUrl('Blog')} className="inline-flex items-center gap-1 text-[#845cc5] hover:underline mb-6 text-sm">
           <ArrowLeft className="w-4 h-4" /> Back to Blog
         </Link>
 
-        <Badge className="bg-purple-100 text-purple-700 mb-4">{post.category || 'General'}</Badge>
+        <Badge className="bg-[#ede6f8] text-[#7049b5] mb-4">{post.category || 'General'}</Badge>
 
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
 

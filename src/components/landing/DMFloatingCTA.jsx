@@ -33,7 +33,7 @@ export default function DMFloatingCTA() {
             {isExpanded ? (
               <Button
                 onClick={() => window.open('https://wa.me/2348168349969?text=' + encodeURIComponent('Hello, I\'d like to speak with someone from DiverseMinds Therapy. Reason for reaching out: ____________________ Thank you.'), '_blank')}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-2xl rounded-full px-6 py-6 sm:px-8 sm:py-7 flex items-center gap-3 group relative overflow-hidden"
+                className="bg-gradient-to-r from-[#37ae84] to-[#2b9a73] hover:from-[#2b9a73] hover:to-[#237d5d] text-white shadow-2xl rounded-full px-6 py-6 sm:px-8 sm:py-7 flex items-center gap-3 group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 animate-pulse" />
@@ -53,7 +53,7 @@ export default function DMFloatingCTA() {
             ) : (
               <Button
                 onClick={() => setIsExpanded(true)}
-                className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-2xl rounded-full p-4 sm:p-5 group relative overflow-hidden"
+                className="bg-gradient-to-r from-[#37ae84] to-[#2b9a73] hover:from-[#2b9a73] hover:to-[#237d5d] text-white shadow-2xl rounded-full p-4 sm:p-5 group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700" />
                 <MessageCircle className="w-6 h-6 animate-pulse" />

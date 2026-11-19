@@ -16,7 +16,7 @@ export default function Layout({ children, currentPageName }) {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Organisation name strip */}
-      <div className="bg-gradient-to-r from-purple-700 to-blue-700 text-white">
+      <div className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1.5 flex justify-end">
           <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wide text-right leading-snug">
             DiverseMinds Special Education Needs &amp; Consult Ltd.
@@ -30,25 +30,25 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to={createPageUrl('Home')} className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-[#845cc5] to-[#0a77e2] bg-clip-text text-transparent">
                 DiverseMinds
               </span>
             </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-8">
-              <a href="#services" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              <a href="#services" className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium">
                 Services
               </a>
-              <a href="#faq" className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              <a href="#faq" className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium">
                 FAQ
               </a>
-              <Link to={createPageUrl('Blog')} className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+              <Link to={createPageUrl('Blog')} className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium">
                 Blog
               </Link>
               <Popover>
                 <PopoverTrigger asChild>
-                  <button className="text-gray-700 hover:text-purple-600 transition-colors font-medium">
+                  <button className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium">
                     Contact us
                   </button>
                 </PopoverTrigger>
@@ -57,10 +57,10 @@ export default function Layout({ children, currentPageName }) {
                     <h4 className="font-semibold text-gray-900 mb-3">Get in touch</h4>
                     <a
                       href="mailto:diversemindsfoundation@gmail.com"
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-50 transition-colors group"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#f6f2fb] transition-colors group"
                     >
                       <div className="bg-purple-100 p-2 rounded-lg group-hover:bg-purple-200 transition-colors">
-                        <Mail className="w-5 h-5 text-purple-600" />
+                        <Mail className="w-5 h-5 text-[#845cc5]" />
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-medium text-gray-900">Email us</div>
@@ -71,10 +71,10 @@ export default function Layout({ children, currentPageName }) {
                       href="https://wa.me/2348168349969"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-green-50 transition-colors group"
+                      className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#eef8f4] transition-colors group"
                     >
-                      <div className="bg-green-100 p-2 rounded-lg group-hover:bg-green-200 transition-colors">
-                        <MessageCircle className="w-5 h-5 text-green-600" />
+                      <div className="bg-[#d9f0e7] p-2 rounded-lg group-hover:bg-[#b9e0cf] transition-colors">
+                        <MessageCircle className="w-5 h-5 text-[#2b9a73]" />
                       </div>
                       <div className="flex-1">
                         <div className="text-sm font-medium text-gray-900">WhatsApp</div>
@@ -86,7 +86,7 @@ export default function Layout({ children, currentPageName }) {
               </Popover>
               <Button 
                 onClick={() => navigate('/GetSupport')}
-                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700"
+                className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] hover:from-[#7049b5] hover:to-[#075fb8]"
               >
                 Get Started
               </Button>
@@ -108,21 +108,21 @@ export default function Layout({ children, currentPageName }) {
                 <a 
                   href="#services" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2"
+                  className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium px-2"
                 >
                   Services
                 </a>
                 <a 
                   href="#faq" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2"
+                  className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium px-2"
                 >
                   FAQ
                 </a>
                 <Link
                   to={createPageUrl('Blog')}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-gray-700 hover:text-purple-600 transition-colors font-medium px-2"
+                  className="text-gray-700 hover:text-[#845cc5] transition-colors font-medium px-2"
                 >
                   Blog
                 </Link>
@@ -130,10 +130,10 @@ export default function Layout({ children, currentPageName }) {
                   <p className="text-sm font-medium text-gray-900">Contact us</p>
                   <a
                     href="mailto:diversemindsfoundation@gmail.com"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-purple-50 transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#f6f2fb] transition-colors"
                   >
                     <div className="bg-purple-100 p-2 rounded-lg">
-                      <Mail className="w-5 h-5 text-purple-600" />
+                      <Mail className="w-5 h-5 text-[#845cc5]" />
                     </div>
                     <span className="text-sm text-gray-700">Email us</span>
                   </a>
@@ -141,10 +141,10 @@ export default function Layout({ children, currentPageName }) {
                     href="https://wa.me/2348168349969"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-green-50 transition-colors"
+                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-[#eef8f4] transition-colors"
                   >
-                    <div className="bg-green-100 p-2 rounded-lg">
-                      <MessageCircle className="w-5 h-5 text-green-600" />
+                    <div className="bg-[#d9f0e7] p-2 rounded-lg">
+                      <MessageCircle className="w-5 h-5 text-[#2b9a73]" />
                     </div>
                     <span className="text-sm text-gray-700">WhatsApp</span>
                   </a>
@@ -154,7 +154,7 @@ export default function Layout({ children, currentPageName }) {
                     setMobileMenuOpen(false);
                     navigate('/GetSupport');
                   }}
-                  className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 w-full"
+                  className="bg-gradient-to-r from-[#845cc5] to-[#0a77e2] hover:from-[#7049b5] hover:to-[#075fb8] w-full"
                 >
                   Get Started
                 </Button>

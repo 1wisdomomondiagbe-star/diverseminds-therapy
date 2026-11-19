@@ -88,9 +88,9 @@ export default function DMFAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-white/80 backdrop-blur-sm rounded-2xl border border-purple-100/50 shadow-md hover:shadow-lg transition-shadow px-4 sm:px-6"
+                className="bg-white/80 backdrop-blur-sm rounded-2xl border border-[#e5daf3]/50 shadow-md hover:shadow-lg transition-shadow px-4 sm:px-6"
               >
-                <AccordionTrigger className="text-left text-base sm:text-lg font-semibold text-gray-900 hover:text-purple-600 py-4 sm:py-5">
+                <AccordionTrigger className="text-left text-base sm:text-lg font-semibold text-gray-900 hover:text-[#845cc5] py-4 sm:py-5">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-sm sm:text-base text-gray-700 pb-4 sm:pb-5">

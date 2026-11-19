@@ -50,8 +50,7 @@ export default function DMHeroSection({ onCTAClick }) {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-base sm:text-lg md:text-xl text-gray-700 mb-8 sm:mb-10 max-w-3xl mx-auto leading-relaxed px-4">
 
-            From ABA therapy to speech, occupational therapy, homeschooling support, and more — DiverseMinds offers expert, 
-            compassionate services both online and at home. Location is not a barrier 🌍
+            We provide personalised support for children and young people with diverse developmental and learning needs. Through specialised therapy, education and practical life-skills programmes, we help every learner build confidence, develop essential skills and become more independent.
           </motion.p>
 
           {/* CTA Button */}
@@ -92,6 +91,28 @@ export default function DMHeroSection({ onCTAClick }) {
               Expert Team
             </span>
           </motion.div>
+
+          {/* Hero photograph */}
+          <motion.figure
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.55 }}
+            className="mt-10 sm:mt-12 md:mt-16 mx-auto max-w-5xl overflow-hidden rounded-3xl border border-white/70 bg-white/60 shadow-2xl shadow-[#845cc5]/10">
+
+            <img
+              src="/assets/diverseminds-hero-educator-child.webp"
+              alt="An educator supporting a young child with a hands-on learning activity."
+              width="1536"
+              height="1024"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              className="block aspect-[3/2] w-full object-cover object-center"
+            />
+            <figcaption className="border-t border-white/70 bg-white/80 px-5 py-3 text-center text-sm font-medium text-gray-700 backdrop-blur-sm sm:px-8 sm:py-4">
+              Compassionate, practical support that helps every child build confidence and independence.
+            </figcaption>
+          </motion.figure>
 
           {/* Visual elements */}
           <motion.div

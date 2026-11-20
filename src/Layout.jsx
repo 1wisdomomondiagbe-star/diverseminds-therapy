@@ -30,7 +30,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <Link to={createPageUrl('Home')} className="flex items-center">
-              <span className="text-2xl font-bold bg-gradient-to-r from-[#845cc5] to-[#0a77e2] bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-[#845cc5]">
                 DiverseMinds
               </span>
             </Link>

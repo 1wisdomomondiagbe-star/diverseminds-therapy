@@ -46,7 +46,7 @@ export default function TherapyOptions() {
             className="bg-white/95 backdrop-blur-sm rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-teal-100/50"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <div className="bg-gradient-to-br from-teal-100 to-teal-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
+              <div className="bg-[#d9f0e7] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
                 <Home className="w-6 h-6 sm:w-8 sm:h-8 text-teal-600" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Home-Based ABA Therapy</h3>
@@ -63,7 +63,7 @@ export default function TherapyOptions() {
               ))}
             </ul>
 
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
+            <div className="bg-[#eef8f4] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
               <p className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">How it works:</p>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 A therapist works one-on-one with your child in your home, using everyday activities to teach 
@@ -81,7 +81,7 @@ export default function TherapyOptions() {
             className="bg-white/95 backdrop-blur-sm rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-rose-100/50"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <div className="bg-gradient-to-br from-rose-100 to-rose-200 rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
+              <div className="bg-[#ede6f8] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
                 <Building2 className="w-6 h-6 sm:w-8 sm:h-8 text-rose-600" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Clinic-Based ABA Therapy</h3>
@@ -98,7 +98,7 @@ export default function TherapyOptions() {
               ))}
             </ul>
 
-            <div className="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
+            <div className="bg-[#f6f2fb] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
               <p className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">How it works:</p>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Your child attends sessions at our clinic, where therapists use structured, evidence-based 
@@ -114,7 +114,7 @@ export default function TherapyOptions() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-r from-teal-500 via-teal-600 to-rose-500 rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 text-white shadow-2xl border-2 border-white/20"
+          className="bg-[#0a77e2] rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 text-white shadow-2xl border-2 border-white/20"
         >
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4">

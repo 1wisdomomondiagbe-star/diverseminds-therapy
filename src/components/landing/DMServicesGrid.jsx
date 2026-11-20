@@ -18,55 +18,55 @@ export default function DMServicesGrid() {
       icon: Brain,
       title: 'ABA Therapy',
       description: 'Evidence-based behavioral intervention for skill development',
-      color: 'from-[#ede6f8] to-[#d9c9ef]'
+      color: 'bg-[#ede6f8]'
     },
     {
       icon: MessageSquare,
       title: 'Speech Therapy',
       description: 'Communication and language development support',
-      color: 'from-[#dcecfb] to-[#bdd9f5]'
+      color: 'bg-[#dcecfb]'
     },
     {
       icon: Hand,
       title: 'Occupational Therapy',
       description: 'Fine motor skills and daily living activities',
-      color: 'from-[#d9f0e7] to-[#b9e0cf]'
+      color: 'bg-[#d9f0e7]'
     },
     {
       icon: BookOpen,
       title: 'Homeschooling Support',
       description: 'Personalized educational programs at home',
-      color: 'from-[#f1f7fd] to-[#dcecfb]'
+      color: 'bg-[#f1f7fd]'
     },
     {
       icon: UserCheck,
       title: 'Shadow Teacher',
       description: 'One-on-one school support services',
-      color: 'from-[#eef8f4] to-[#d9f0e7]'
+      color: 'bg-[#eef8f4]'
     },
     {
       icon: Users,
       title: 'Parent Training',
       description: 'Coaching and guidance for caregivers',
-      color: 'from-[#ede6f8] to-[#d9c9ef]'
+      color: 'bg-[#ede6f8]'
     },
     {
       icon: GraduationCap,
       title: 'Staff Training',
       description: 'Professional capacity building programs',
-      color: 'from-[#dcecfb] to-[#bdd9f5]'
+      color: 'bg-[#dcecfb]'
     },
     {
       icon: Languages,
       title: 'Sign Language',
       description: 'Sign language tutoring and communication',
-      color: 'from-[#d9f0e7] to-[#b9e0cf]'
+      color: 'bg-[#d9f0e7]'
     },
     {
       icon: ClipboardCheck,
       title: 'Assessments',
       description: 'Online and physical developmental evaluations',
-      color: 'from-[#f1f7fd] to-[#dcecfb]'
+      color: 'bg-[#f1f7fd]'
     }
   ];
 
@@ -98,7 +98,7 @@ export default function DMServicesGrid() {
               transition={{ duration: 0.5, delay: index * 0.05 }}
               className="flex flex-col items-center gap-2 sm:gap-3 p-4 sm:p-5 bg-white rounded-2xl sm:rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-100"
             >
-              <div className={`bg-gradient-to-br ${service.color} rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg`}>
+              <div className={`${service.color} rounded-xl sm:rounded-2xl p-3 sm:p-4 shadow-lg`}>
                 <service.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-gray-700" />
               </div>
               <h3 className="text-sm sm:text-base font-semibold text-gray-900 text-center leading-tight">{service.title}</h3>

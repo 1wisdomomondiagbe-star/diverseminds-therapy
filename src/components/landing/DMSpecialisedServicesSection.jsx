@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, Camera, Code2, Hand, MessageSquare, Palette, Sparkles } from 'lucide-react';
+import { Activity, BookOpen, Camera, ClipboardCheck, Code2, GraduationCap, Hand, Languages, MessageSquare, Palette, Sparkles, UserCheck, Users } from 'lucide-react';
 
 const services = [
   {
@@ -20,6 +20,41 @@ const services = [
     title: 'Activities of Daily Living (ADL) Skills',
     description: 'Fine motor skills and daily living activities.',
     icon: Hand
+  },
+  {
+    title: 'Shadow Teacher Support',
+    description: 'One-on-one school support services.',
+    icon: UserCheck
+  },
+  {
+    title: 'Occupational Therapy',
+    description: 'Fine motor skills and daily living activities.',
+    icon: Hand
+  },
+  {
+    title: 'Homeschooling Support',
+    description: 'Personalized educational programs at home.',
+    icon: BookOpen
+  },
+  {
+    title: 'Parent Training',
+    description: 'Coaching and guidance for caregivers.',
+    icon: Users
+  },
+  {
+    title: 'Staff Training',
+    description: 'Professional capacity building programs.',
+    icon: GraduationCap
+  },
+  {
+    title: 'Sign Language',
+    description: 'Sign language tutoring and communication.',
+    icon: Languages
+  },
+  {
+    title: 'Assessments',
+    description: 'Online and physical developmental evaluations.',
+    icon: ClipboardCheck
   },
   {
     title: 'Vocational and Pre-Vocational Skills',

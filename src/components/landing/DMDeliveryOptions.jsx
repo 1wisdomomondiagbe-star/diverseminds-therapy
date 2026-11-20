@@ -53,7 +53,7 @@ export default function DMDeliveryOptions() {
             className="bg-white/95 backdrop-blur-sm rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#e5daf3]/50"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <div className="bg-gradient-to-br from-[#ede6f8] to-[#d9c9ef] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
+              <div className="bg-[#ede6f8] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
                 <Monitor className="w-6 h-6 sm:w-8 sm:h-8 text-[#845cc5]" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Online Services</h3>
@@ -70,7 +70,7 @@ export default function DMDeliveryOptions() {
               ))}
             </ul>
 
-            <div className="bg-gradient-to-br from-[#f6f2fb] to-[#f1f7fd] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
+            <div className="bg-[#f6f2fb] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
               <p className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">How it works:</p>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Connect with our certified therapists via secure video sessions. We provide the same quality care online as we do in person.
@@ -87,7 +87,7 @@ export default function DMDeliveryOptions() {
             className="bg-white/95 backdrop-blur-sm rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#dcecfb]/50"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <div className="bg-gradient-to-br from-[#f1f7fd] to-[#dcecfb] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
+              <div className="bg-[#f1f7fd] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
                 <Home className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a77e2]" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">Home-Based Services</h3>
@@ -104,7 +104,7 @@ export default function DMDeliveryOptions() {
               ))}
             </ul>
 
-            <div className="bg-gradient-to-br from-[#eef8f4] to-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
+            <div className="bg-[#eef8f4] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
               <p className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">How it works:</p>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Our therapists travel to your home to provide personalized, hands-on support in your child's natural environment.
@@ -121,7 +121,7 @@ export default function DMDeliveryOptions() {
             className="bg-white/95 backdrop-blur-sm rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-[1.02] border border-[#dcecfb]/50"
           >
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
-              <div className="bg-gradient-to-br from-[#dcecfb] to-[#bdd9f5] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
+              <div className="bg-[#dcecfb] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-lg">
                 <School className="w-6 h-6 sm:w-8 sm:h-8 text-[#0a77e2]" />
               </div>
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900">School-Based Services</h3>
@@ -138,7 +138,7 @@ export default function DMDeliveryOptions() {
               ))}
             </ul>
 
-            <div className="bg-gradient-to-br from-[#f1f7fd] to-[#f6f2fb] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
+            <div className="bg-[#f1f7fd] rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-inner">
               <p className="text-xs sm:text-sm font-semibold text-gray-900 mb-2">How it works:</p>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                 Our therapists or shadow teachers work directly with your child in school for agreed hours, collaborating with teachers to provide structured, goal-focused support during the school day.
@@ -153,7 +153,7 @@ export default function DMDeliveryOptions() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-gradient-to-r from-[#845cc5] via-[#0a77e2] to-[#37ae84] rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 text-white shadow-2xl border-2 border-white/20"
+          className="bg-[#0a77e2] rounded-3xl sm:rounded-[2rem] p-6 sm:p-8 lg:p-10 text-white shadow-2xl border-2 border-white/20"
         >
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
             <div className="bg-white/20 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4">

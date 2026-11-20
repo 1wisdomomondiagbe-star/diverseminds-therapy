@@ -4,7 +4,6 @@ import DMHeroSection from '../components/landing/DMHeroSection';
 import DMWhoWeSupportSection from '../components/landing/DMWhoWeSupportSection';
 import DMProgrammesSection from '../components/landing/DMProgrammesSection';
 import DMSpecialisedServicesSection from '../components/landing/DMSpecialisedServicesSection';
-import DMServicesGrid from '../components/landing/DMServicesGrid';
 import DMEmpathySection from '../components/landing/DMEmpathySection';
 import DMDeliveryOptions from '../components/landing/DMDeliveryOptions';
 import DMValuesSection from '../components/landing/DMValuesSection';
@@ -23,7 +22,6 @@ export default function Home() {
       <DMWhoWeSupportSection />
       <DMProgrammesSection />
       <DMSpecialisedServicesSection />
-      <DMServicesGrid />
       <DMEmpathySection />
       <DMDeliveryOptions />
       <DMValuesSection />

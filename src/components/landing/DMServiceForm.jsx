@@ -89,9 +89,9 @@ export default function DMServiceForm() {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-br from-purple-50/80 via-white to-blue-50/60 rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-[#e5daf3]/50">
+            className="bg-[#f6f2fb] rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-[#e5daf3]/50">
 
-            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br from-[#845cc5] to-[#0a77e2] rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-[#845cc5] rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl">
               <CheckCircle2 className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
             </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">Thank You!</h3>
@@ -131,7 +131,7 @@ export default function DMServiceForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-gradient-to-br from-white via-purple-50/30 to-blue-50/20 rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-[#e5daf3]/50">
+          className="bg-white rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-[#e5daf3]/50">
 
           {/* Child Information */}
           <div className="space-y-4 sm:space-y-6">

@@ -6,7 +6,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Loader2, CheckCircle2 } from 'lucide-react';
-import { base44 } from '@/api/base44Client';
 
 export default function DMServiceForm() {
   const [formData, setFormData] = useState({
@@ -28,6 +27,8 @@ export default function DMServiceForm() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+  const [toast, setToast] = useState(null);
 
   const challenges = [
   'Communication difficulties',
@@ -62,40 +63,39 @@ export default function DMServiceForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage('');
+    setToast(null);
+
+    if (!formData.parent_name.trim() || !formData.phone.trim() || !formData.email.trim() || !formData.consent_to_contact) {
+      const message = 'Please complete your name, phone, email, and consent before sending.';
+      setErrorMessage(message);
+      setToast({ type: 'error', message });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
-      await base44.entities.ServiceInquiry.create(formData);
+      const response = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      const result = await response.json().catch(() => ({}));
 
-      // Keep the imported integrations as best-effort notifications. The local
-      // Manus data layer remains the source of truth for this copy.
-      await Promise.allSettled([
-      fetch('https://webhookreceiver-ps6nryst2a-ey.a.run.app?key=HPDcAMrZ96YKYHYlMkjIh1uNLvbFt1sm', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      }),
-      fetch('https://1925f1a3-c1bd-40a8-aacf-030f1b79a1d8.wf-app-prod.cosmic.webflow.services/form-collector-sheets/api/webhooks/webhook_1769897439903_ommfwzs/collect', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      }),
-      fetch('https://henryevil.app.n8n.cloud/webhook/diverseminds', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })]
-      );
+      if (!response.ok) {
+        throw new Error(result.error || 'We could not send your inquiry. Please try again.');
+      }
 
+      setToast({ type: 'success', message: 'Your inquiry was sent successfully. We’ll be in touch soon.' });
       setIsSuccess(true);
     } catch (error) {
       console.error('Form submission error:', error);
+      const message = error instanceof Error ? error.message : 'We could not send your inquiry. Please try again.';
+      setErrorMessage(message);
+      setToast({ type: 'error', message });
     } finally {
       setIsSubmitting(false);
     }
@@ -104,6 +104,7 @@ export default function DMServiceForm() {
   if (isSuccess) {
     return (
       <section id="service-form" className="bg-gradient-to-b from-[#f6f2fb]/45 via-white to-[#f1f7fd]/45 py-12 sm:py-16 md:py-20 lg:py-28">
+        {toast && <div role="status" aria-live="polite" className="fixed top-5 right-5 z-50 max-w-sm rounded-xl bg-emerald-600 px-5 py-4 text-sm font-medium text-white shadow-2xl">{toast.message}</div>}
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -129,6 +130,7 @@ export default function DMServiceForm() {
 
   return (
     <section id="service-form" className="bg-gradient-to-b from-[#f6f2fb]/45 via-white to-[#f1f7fd]/45 py-12 sm:py-16 md:py-20 lg:py-28">
+      {toast && <div role="alert" aria-live="assertive" className={`fixed top-5 right-5 z-50 max-w-sm rounded-xl px-5 py-4 text-sm font-medium text-white shadow-2xl ${toast.type === 'error' ? 'bg-red-600' : 'bg-emerald-600'}`}>{toast.message}</div>}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -376,6 +378,7 @@ export default function DMServiceForm() {
           </div>
 
           {/* Submit Button */}
+          {errorMessage && <p role="alert" className="rounded-lg bg-red-50 px-4 py-3 text-sm font-medium text-red-700">{errorMessage}</p>}
           <div className="flex flex-col items-center gap-3">
             <Button
               type="submit"

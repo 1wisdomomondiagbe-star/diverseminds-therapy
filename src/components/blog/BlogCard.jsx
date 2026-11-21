@@ -32,14 +32,14 @@ export default function BlogCard({ post }) {
           {post.excerpt && (
             <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-1">{post.excerpt}</p>
           )}
-          <div className="flex items-center gap-4 text-xs text-gray-400 mt-auto pt-4 border-t border-gray-100">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-gray-400 mt-auto pt-4 border-t border-gray-100">
             {post.author && (
-              <span className="flex items-center gap-1">
+              <span className="flex min-w-0 items-center gap-1 break-words">
                 <User className="w-3 h-3" /> {post.author}
               </span>
             )}
             {post.published_date && (
-              <span className="flex items-center gap-1">
+              <span className="flex items-center gap-1 whitespace-nowrap">
                 <Calendar className="w-3 h-3" />
                 {format(new Date(post.published_date), 'MMM d, yyyy')}
               </span>

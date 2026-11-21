@@ -59,19 +59,19 @@ export default function BlogPostPage() {
 
         <Badge className="bg-[#ede6f8] text-[#7049b5] mb-4">{post.category || 'General'}</Badge>
 
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{post.title}</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 break-words">{post.title}</h1>
 
-        <div className="flex items-center gap-4 text-sm text-gray-400 mb-8 pb-6 border-b border-gray-100">
-          {post.author && <span className="flex items-center gap-1"><User className="w-4 h-4" />{post.author}</span>}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-gray-400 mb-8 pb-6 border-b border-gray-100">
+          {post.author && <span className="flex min-w-0 items-center gap-1 break-words"><User className="w-4 h-4 shrink-0" />{post.author}</span>}
           {post.published_date && (
-            <span className="flex items-center gap-1">
+            <span className="flex items-center gap-1 whitespace-nowrap">
               <Calendar className="w-4 h-4" />
               {format(new Date(post.published_date), 'MMMM d, yyyy')}
             </span>
           )}
         </div>
 
-        <div className="prose prose-purple max-w-none text-gray-700 leading-relaxed">
+        <div className="prose prose-purple max-w-none break-words text-gray-700 leading-relaxed">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>

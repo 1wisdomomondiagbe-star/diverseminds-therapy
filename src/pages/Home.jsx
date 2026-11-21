@@ -40,6 +40,14 @@ export default function Home() {
             <p className="text-xs sm:text-sm md:text-base text-gray-400 px-2">
               RC. 7325824 • Location is not a barrier — we proudly serve clients worldwide 🌍
             </p>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=81+Yaounde+Street%2C+Wuse+Zone+6%2C+Abuja%2C+Nigeria"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-xs sm:text-sm md:text-base text-gray-400 px-2 hover:text-purple-300 transition-colors"
+            >
+              81 Yaoundé Street, Wuse Zone 6, Abuja
+            </a>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-2 md:gap-3 text-xs sm:text-sm md:text-base text-gray-400 px-2 flex-wrap">
               <a href="tel:+2348168349969" className="hover:text-purple-300 transition-colors">+234 816 834 9969</a>
               <span className="hidden sm:inline">•</span>

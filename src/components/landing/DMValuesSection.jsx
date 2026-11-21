@@ -55,9 +55,9 @@ export default function DMValuesSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 bg-gradient-to-r from-[#f6f2fb]/80 via-[#f1f7fd]/70 to-white rounded-2xl sm:rounded-3xl shadow-md hover:shadow-lg transition-all duration-300"
+                className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 bg-[#f6f2fb] rounded-2xl sm:rounded-3xl shadow-md hover:shadow-lg transition-all duration-300"
               >
-                <div className="bg-gradient-to-br from-white to-purple-50 rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-lg flex-shrink-0">
+                <div className="bg-white rounded-xl sm:rounded-2xl p-2 sm:p-3 shadow-lg flex-shrink-0">
                   <value.icon className="w-5 h-5 sm:w-6 sm:h-6 text-[#845cc5]" />
                 </div>
                 <p className="text-sm sm:text-base md:text-lg font-medium text-gray-800">{value.text}</p>
@@ -70,7 +70,7 @@ export default function DMValuesSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-center bg-gradient-to-r from-[#f6f2fb] to-[#f1f7fd] rounded-xl sm:rounded-2xl p-5 sm:p-6"
+            className="text-center bg-[#f1f7fd] rounded-xl sm:rounded-2xl p-5 sm:p-6"
           >
             <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
               Every child deserves the opportunity to thrive. We're here to make that possible — no matter where you are.

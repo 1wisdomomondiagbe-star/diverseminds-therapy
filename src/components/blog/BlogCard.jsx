@@ -16,7 +16,7 @@ export default function BlogCard({ post }) {
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
           />
         ) : (
-          <div className="w-full h-48 bg-gradient-to-br from-purple-100 to-blue-100 flex items-center justify-center">
+          <div className="w-full h-48 bg-[#ede6f8] flex items-center justify-center">
             <span className="text-4xl">📝</span>
           </div>
         )}

@@ -6,7 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Label } from '@/components/ui/label';
-import { base44 } from '@/api/base44Client';
+import { dataClient } from '@/api/dataClient';
 import { 
   ArrowRight, 
   ArrowLeft, 
@@ -71,11 +71,7 @@ export default function ReadinessForm() {
     
     setIsSubmitting(true);
     try {
-      await base44.integrations.Core.SendEmail({
-        to: formData.email,
-        subject: 'Thank You - ABA Therapy Readiness Form Received',
-        body: `Dear ${formData.parentName},\n\nThank you for completing our ABA therapy readiness form for ${formData.childName || 'your child'}.\n\nA member of our team will review your responses and contact you within 24-48 hours to discuss whether ABA therapy may be helpful and which therapy option could be the best fit.\n\nYou're taking a positive step — and you don't have to figure this out alone.\n\nWarm regards,\nThe ABA Therapy Team`
-      });
+      await dataClient.entities.ServiceInquiry.create(formData);
       setIsSubmitted(true);
     } catch (error) {
       console.error('Submission error:', error);

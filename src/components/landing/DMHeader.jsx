@@ -14,7 +14,7 @@ export default function DMHeader() {
           <motion.img
             whileHover={{ scale: 1.05 }}
             transition={{ duration: 0.3 }}
-            src="https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/696958987ef527257bd8b920/304075629_quality_restoration_20260118171724002.png"
+            src="/assets/diversminds-logo.png"
             alt="DiverseMinds Logo"
             className="h-14 sm:h-20 md:h-24 w-auto drop-shadow-2xl hover:drop-shadow-[0_0_25px_rgba(147,51,234,0.5)] transition-all duration-300"
           />

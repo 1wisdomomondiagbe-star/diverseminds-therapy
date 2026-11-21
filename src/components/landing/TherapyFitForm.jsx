@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { base44 } from '@/api/base44Client';
+import { dataClient } from '@/api/dataClient';
 import { CheckCircle2, Loader2 } from 'lucide-react';
 
 export default function TherapyFitForm() {
@@ -42,7 +42,7 @@ export default function TherapyFitForm() {
     setIsSubmitting(true);
 
     try {
-      await base44.entities.TherapyInquiry.create(formData);
+      await dataClient.entities.ServiceInquiry.create(formData);
       setIsSuccess(true);
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -59,7 +59,7 @@ export default function TherapyFitForm() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="bg-gradient-to-br from-teal-50/80 via-white to-rose-50/60 rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-teal-100/50"
+            className="bg-[#eef8f4] rounded-3xl sm:rounded-[2rem] p-8 sm:p-12 text-center shadow-2xl border border-teal-100/50"
           >
             <CheckCircle2 className="w-12 h-12 sm:w-16 sm:h-16 text-green-600 mx-auto mb-4 sm:mb-6" />
             <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
@@ -108,7 +108,7 @@ export default function TherapyFitForm() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={handleSubmit}
-          className="bg-gradient-to-br from-white via-cream-50/30 to-teal-50/20 rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-teal-100/50"
+          className="bg-white rounded-3xl sm:rounded-[2rem] p-5 sm:p-8 lg:p-12 shadow-2xl space-y-8 sm:space-y-10 border border-teal-100/50"
         >
           {/* Section 1: About Your Child */}
           <div className="space-y-6">

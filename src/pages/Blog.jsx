@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { dataClient } from '@/api/dataClient';
 import BlogCard from '../components/blog/BlogCard';
 import BackToHome from '@/components/BackToHome';
 import { Input } from '@/components/ui/input';
@@ -14,7 +14,7 @@ export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
-    base44.entities.BlogPost.filter({ published: true }, '-published_date').then((data) => {
+    dataClient.entities.BlogPost.filter({ published: true }, '-published_date').then((data) => {
       setPosts(data);
       setLoading(false);
     });

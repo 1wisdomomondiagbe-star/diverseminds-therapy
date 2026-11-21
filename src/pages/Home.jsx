@@ -1,10 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import DMHeroSection from '../components/landing/DMHeroSection';
-import DMServicesGrid from '../components/landing/DMServicesGrid';
+import DMWhoWeSupportSection from '../components/landing/DMWhoWeSupportSection';
+import DMProgrammesSection from '../components/landing/DMProgrammesSection';
+import DMSpecialisedServicesSection from '../components/landing/DMSpecialisedServicesSection';
 import DMEmpathySection from '../components/landing/DMEmpathySection';
 import DMDeliveryOptions from '../components/landing/DMDeliveryOptions';
 import DMValuesSection from '../components/landing/DMValuesSection';
+import DMClosingMessageSection from '../components/landing/DMClosingMessageSection';
 import DMFAQSection from '../components/landing/DMFAQSection';
 import DMFinalCTA from '../components/landing/DMFinalCTA';
 import DMFloatingCTA from '../components/landing/DMFloatingCTA';
@@ -16,10 +19,13 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-purple-50/20 to-blue-50/30">
       <DMHeroSection onCTAClick={goToForm} />
-      <DMServicesGrid />
+      <DMWhoWeSupportSection />
+      <DMProgrammesSection />
+      <DMSpecialisedServicesSection />
       <DMEmpathySection />
       <DMDeliveryOptions />
       <DMValuesSection />
+      <DMClosingMessageSection />
       <DMFAQSection />
       <DMFinalCTA onFormClick={goToForm} />
       <DMFloatingCTA />

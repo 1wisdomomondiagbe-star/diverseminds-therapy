@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { base44 } from '@/api/base44Client';
+import { dataClient } from '@/api/dataClient';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Badge } from '@/components/ui/badge';
@@ -15,7 +15,7 @@ export default function BlogPostPage() {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
     if (id) {
-      base44.entities.BlogPost.filter({ id }).then((data) => {
+      dataClient.entities.BlogPost.filter({ id }).then((data) => {
         setPost(data[0] || null);
         setLoading(false);
       });

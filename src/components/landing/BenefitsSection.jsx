@@ -62,7 +62,7 @@ export default function BenefitsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-gradient-to-br from-teal-50/80 via-white to-rose-50/60 rounded-2xl sm:rounded-3xl p-5 sm:p-6 hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-teal-100/50 shadow-lg"
+              className="bg-[#eef8f4] rounded-2xl sm:rounded-3xl p-5 sm:p-6 hover:shadow-2xl transition-all duration-500 hover:scale-105 border border-teal-100/50 shadow-lg"
             >
               <benefit.icon className="w-10 h-10 sm:w-12 sm:h-12 text-teal-600 mb-3 sm:mb-4" />
               <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
@@ -76,7 +76,7 @@ export default function BenefitsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center bg-gradient-to-r from-amber-50/80 via-peach-50/60 to-rose-50/70 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-amber-100/50"
+          className="text-center bg-[#f6f2fb] rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg border border-amber-100/50"
         >
           <p className="text-base sm:text-lg text-gray-700 font-medium">
             Every therapy plan is personalized, realistic, and adjusted as your child grows.

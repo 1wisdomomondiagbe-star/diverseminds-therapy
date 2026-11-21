@@ -1,0 +1,17 @@
+{
+  "name": "DiverseMinds Therapy",
+  "short_name": "DiverseMinds",
+  "description": "Compassionate, child-focused therapy and special education support for children and families.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6d4aff",
+  "icons": [
+    {
+      "src": "/diverseminds-logo.png",
+      "sizes": "350x350",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

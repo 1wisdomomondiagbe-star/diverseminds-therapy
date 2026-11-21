@@ -44,7 +44,7 @@ export default function Home() {
               href="https://www.google.com/maps/search/?api=1&query=81+Yaounde+Street%2C+Wuse+Zone+6%2C+Abuja%2C+Nigeria"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block text-xs sm:text-sm md:text-base text-gray-400 px-2 hover:text-purple-300 transition-colors"
+              className="block max-w-full break-words px-2 text-xs leading-relaxed text-gray-400 hover:text-purple-300 transition-colors sm:text-sm md:text-base"
             >
               81 Yaoundé Street, Wuse Zone 6, Abuja
             </a>

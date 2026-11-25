@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { dataClient } from '@/api/dataClient';
+import { blogClient } from '@/api/blogClient';
 import BlogCard from '../components/blog/BlogCard';
 import BackToHome from '@/components/BackToHome';
 import { Input } from '@/components/ui/input';
@@ -10,14 +10,15 @@ const CATEGORIES = ['All', 'ABA Therapy', 'Speech Therapy', 'Occupational Therap
 export default function Blog() {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
   const [search, setSearch] = useState('');
   const [activeCategory, setActiveCategory] = useState('All');
 
   useEffect(() => {
-    dataClient.entities.BlogPost.filter({ published: true }, '-published_date').then((data) => {
-      setPosts(data);
-      setLoading(false);
-    });
+    blogClient.list()
+      .then(setPosts)
+      .catch((loadError) => setError(loadError instanceof Error ? loadError.message : 'We could not load the blog right now.'))
+      .finally(() => setLoading(false));
   }, []);
 
   const filtered = posts.filter((p) => {
@@ -75,6 +76,11 @@ export default function Blog() {
             {[...Array(6)].map((_, i) => (
               <div key={i} className="bg-white rounded-2xl h-64 animate-pulse" />
             ))}
+          </div>
+        ) : error ? (
+          <div role="alert" className="text-center py-20 text-gray-500">
+            <p className="text-lg">{error}</p>
+            <p className="mt-2 text-sm">Please refresh the page and try again.</p>
           </div>
         ) : filtered.length === 0 ? (
           <div className="text-center py-20 text-gray-400">

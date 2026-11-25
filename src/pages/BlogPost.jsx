@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { dataClient } from '@/api/dataClient';
+import { blogClient } from '@/api/blogClient';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { Badge } from '@/components/ui/badge';
@@ -10,16 +10,20 @@ import ReactMarkdown from 'react-markdown';
 export default function BlogPostPage() {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
-    if (id) {
-      dataClient.entities.BlogPost.filter({ id }).then((data) => {
-        setPost(data[0] || null);
-        setLoading(false);
-      });
+    if (!id) {
+      setLoading(false);
+      return;
     }
+
+    blogClient.getById(id)
+      .then(setPost)
+      .catch((loadError) => setError(loadError instanceof Error ? loadError.message : 'We could not load this post right now.'))
+      .finally(() => setLoading(false));
   }, []);
 
   if (loading) {
@@ -37,8 +41,9 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="text-center py-32">
-        <p className="text-5xl mb-4">🔍</p>
-        <p className="text-gray-500 text-lg">Post not found.</p>
+        <p className="text-5xl mb-4">{error ? '⚠️' : '🔍'}</p>
+        <p role={error ? 'alert' : undefined} className="text-gray-500 text-lg">{error || 'Post not found.'}</p>
+        {error && <p className="text-gray-400 text-sm mt-2">Please refresh the page and try again.</p>}
         <Link to={createPageUrl('Blog')} className="text-[#845cc5] hover:underline mt-4 inline-block">← Back to Blog</Link>
       </div>
     );

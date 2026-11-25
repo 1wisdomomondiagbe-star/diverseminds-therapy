@@ -10,6 +10,7 @@ The main website now reads published blog posts from the shared DiverseMinds Sup
 - Post status values: `draft` and `published`
 - Image types accepted by the bucket: JPEG, PNG, WebP
 - Image size limit: 5 MB
+- Post categories: `All`, `ABA Therapy`, `Speech Therapy`, `Occupational Therapy`, `Parent Tips`, `Special Education`, `General`
 
 ## Replace the dashboard data layer
 
@@ -34,13 +35,14 @@ Use the `public.posts` field names directly:
 // Load all posts, including drafts, for the authenticated dashboard user
 const { data, error } = await supabase
   .from('posts')
-  .select('id,title,slug,excerpt,content,cover_image_url,status,published_at,created_at,updated_at')
+  .select('id,title,slug,category,excerpt,content,cover_image_url,status,published_at,created_at,updated_at')
   .order('created_at', { ascending: false });
 
 // Create a draft
 await supabase.from('posts').insert({
   title,
   slug,
+  category: category || 'General',
   excerpt: excerpt || null,
   content,
   cover_image_url: coverImageUrl || null,
@@ -52,6 +54,7 @@ await supabase.from('posts').insert({
 await supabase.from('posts').update({
   title,
   slug,
+  category: category || 'General',
   excerpt: excerpt || null,
   content,
   cover_image_url: coverImageUrl || null,
@@ -112,12 +115,13 @@ The dashboard must sign users in with Supabase Auth before loading or mutating p
 | Old dashboard field | Supabase field |
 |---|---|
 | `published` boolean | `status` (`published` / `draft`) |
+| `category` | `category` |
 | `cover_image` | `cover_image_url` |
 | `published_date` | `published_at` |
 | `created_date` | `created_at` |
 | `updated_date` | `updated_at` |
 
-The current `public.posts` table does not contain `author`, `category`, or `tags`. If the dashboard must retain those fields, add them to the shared schema through a reviewed migration, then update both applications consistently. Do not silently store them only in browser storage.
+The current `public.posts` table does not contain `author` or `tags`. The shared `category` column is constrained to the listed values and defaults to `General`. Do not silently store unsupported fields only in browser storage.
 
 ## Verification checklist
 

@@ -11,6 +11,7 @@ function mapPost(post) {
     id: post.id,
     title: post.title,
     slug: post.slug,
+    category: post.category || 'General',
     excerpt: post.excerpt || '',
     content: post.content || '',
     cover_image: post.cover_image_url || '',
@@ -42,7 +43,7 @@ export default async function handler(req, res) {
 
   const postId = typeof req.query?.id === 'string' ? req.query.id.trim() : '';
   const params = new URLSearchParams({
-    select: 'id,title,slug,excerpt,content,cover_image_url,status,published_at,created_at,updated_at',
+    select: 'id,title,slug,category,excerpt,content,cover_image_url,status,published_at,created_at,updated_at',
     status: 'eq.published',
     order: 'published_at.desc.nullslast,created_at.desc',
   });
